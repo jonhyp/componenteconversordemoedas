@@ -14,11 +14,12 @@ export default {
     data(){
         return{
             moedaA_value: "",
-            moedaB_value: 0
+            moedaB_value: 0,
         };
     },
     methods:{
         converter(){
+            this.moedaA = "CAD"
             let de_para = this.moedaA + "_" + this.moedaB;
             let url = "https://free.currconv.com/api/v7/convert?q="+de_para+"&compact=ultra&apiKey=7f1cecff592d97325b47"
             fetch(url)
